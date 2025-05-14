@@ -3,46 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biker Zone with Daisy</title>
+    <title>Biker Zone with DaisyUI</title>
 
-    <!-- daisyUI CDN -->
-<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<!-- Google Font CDN-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-<!-- tailwind CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
-<!-- tailwind.config -->
-<script>
-    tailwind.config = {
-      content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
-      theme: {
-        extend: {
-          colors: {
-            'bike-primary': '#E76F51',
-            'bike-light' : '#FDF0ED', // Custom color
-          },
-        },
-      },
-      // plugins: [require ("daisyui")],
-    };
-  </script>
-<style>
-    .font-poppins {
-        font-family: "Poppins", sans-serif;
-    }
-</style>
-
+    <!-- Google Font CDN-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    
+    <!-- tailwind.config -->
+    <script>
+        tailwind.config = {
+            content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
+            theme: {
+                extend: {
+                    colors: {
+                        'bike-primary': '#E76F51',
+                        'bike-light': '#FDF0ED',
+                    },
+                },
+            },
+            plugins: [require("daisyui")],
+            daisyui: {
+                themes: ["light"],
+            },
+        };
+    </script>
+    
+    <style>
+        .font-poppins {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
 </head>
-<body class="font-poppins">
+<body class="font-poppins" data-theme="light">
     <!-- header section -->
      <header class="md:container md:mx-auto">
           <div class="navbar bg-base-100 shadow-sm">
-            <div class="flex-1">
-        <div class="navbar bg-base-100">
             <div class="flex-1">
               <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -67,7 +69,7 @@
                 <li><a>Contact</a></li>
               </ul>
             </div>
-            <div class="">
+            <div>
               <a class="btn bg-[#E76F51] text-white ">Login</a>
             </div>
           </div>
@@ -75,54 +77,57 @@
           <div class="carousel w-full lg:h-[556px] bg-[#FDF0ED]">
             <!-- slide 1 -->
             <div id="slide1" class="carousel-item relative w-full">
-              <div class="flex flex-col lg:flex-row items-center p-12 lg:p-24">
+              <div class="flex flex-col lg:flex-row items-center p-4 sm:p-8 lg:p-24">
                 <!-- slide content -->
                  <div class="space-y-5 flex-1">
-                    <h1 class="text-3xl md:text-6xl font-bold text-black">Ride-on R15 V4<br/> with Smile</h1>
+                    <h1 class="text-2xl sm:text-4xl md:text-6xl font-bold text-black">Ride-on R15 V4<br/> with Smile</h1>
                     <p class="text-gray-500 mt-2">Amet minim mollit non deserunt ullamco 
                       est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
                     <a href="#" class="btn bg-[#E76F51] text-white mt-4">Purchase</a>
                  </div>
                  <!-- slide image -->
-                  <div class="flex-1"><img class="w-[400px]" src="/images/slider/bike1.png" alt=""></div>
+                  <div class="flex-1 flex justify-center">
+                    <img class="w-full max-w-xs sm:max-w-md md:max-w-lg lg:w-[400px]" src="/images/slider/bike1.png" alt=""></div>
               </div>
-              <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+              <div class="absolute left-2 right-2 sm:left-5 sm:right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                 <a href="#slide3" class="btn btn-circle">❮</a>
                 <a href="#slide2" class="btn btn-circle">❯</a>
               </div>
             </div>
             <!-- slide 2 -->
             <div id="slide2" class="carousel-item relative w-full">
-              <div class="flex flex-col lg:flex-row items-center p-12 lg:p-24">
+              <div class="flex flex-col lg:flex-row items-center p-4 sm:p-8 lg:p-24">
                 <!-- slide content -->
                  <div class="space-y-5 flex-1">
-                    <h1 class="text-3xl md:text-6xl font-bold text-black">Ride-on R15 V4<br/> with Smile</h1>
+                    <h1 class="text-2xl sm:text-4xl md:text-6xl font-bold text-black">Ride-on R15 V4<br/> with Smile</h1>
                     <p class="text-gray-500 mt-2">Amet minim mollit non deserunt ullamco 
                       est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
                     <a href="#" class="btn bg-[#E76F51] text-white mt-4">Purchase</a>
                  </div>
                  <!-- slide image -->
-                  <div class="flex-1"><img class="w-[400px]" src="/images/slider/bike2.png" alt=""></div>
+                  <div class="flex-1 flex justify-center">
+                    <img class="w-full max-w-xs sm:max-w-md md:max-w-lg lg:w-[400px]" src="/images/slider/bike2.png" alt=""></div>
               </div>
-              <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+              <div class="absolute left-2 right-2 sm:left-5 sm:right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                 <a href="#slide1" class="btn btn-circle">❮</a>
                 <a href="#slide3" class="btn btn-circle">❯</a>
               </div>
             </div>
             <!-- slide 3 -->
             <div id="slide3" class="carousel-item relative w-full">
-              <div class="flex flex-col lg:flex-row items-center p-12 lg:p-24">
+              <div class="flex flex-col lg:flex-row items-center p-4 sm:p-8 lg:p-24">
                 <!-- slide content -->
                  <div class="space-y-5 flex-1">
-                    <h1 class="text-3xl md:text-6xl font-bold text-black">Ride-on R15 V4<br/> with Smile</h1>
+                    <h1 class="text-2xl sm:text-4xl md:text-6xl font-bold text-black">Ride-on R15 V4<br/> with Smile</h1>
                     <p class="text-gray-500 mt-2">Amet minim mollit non deserunt ullamco 
                       est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
                     <a href="#" class="btn bg-[#E76F51] text-white mt-4">Purchase</a>
                  </div>
                  <!-- slide image -->
-                  <div class="flex-1"><img class="w-[400px]" src="/images/slider/bike3.png" alt=""></div>
+                  <div class="flex-1 flex justify-center">
+                    <img class="w-full max-w-xs sm:max-w-md md:max-w-lg lg:w-[400px]" src="/images/slider/bike3.png" alt=""></div>
               </div>
-              <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+              <div class="absolute left-2 right-2 sm:left-5 sm:right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                 <a href="#slide2" class="btn btn-circle">❮</a>
                 <a href="#slide1" class="btn btn-circle">❯</a>
               </div>
@@ -163,7 +168,7 @@
                     src="/images/others/latest1.png"
                     alt="Shoes" />
                 </figure>
-                <div class="card-body space-y-5">
+                <div class="card-body space-y-3 pl-3">
                   <h2 class="card-title text-xl font-semibold">Ducati XDIAVEL S-73</h2>
                   <p class="text-base-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, fermentum amet faucibus sed id nisi lectus at.</p>
                   <div class="card-actions">
@@ -178,7 +183,7 @@
                     src="/images/others/latest2.png"
                     alt="Shoes" />
                 </figure>
-                <div class="card-body space-y-5">
+                <div class="card-body space-y-3 pl-3">
                   <h2 class="card-title text-xl font-semibold">Ducati XDIAVEL S-73</h2>
                   <p class="text-base-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, fermentum amet faucibus sed id nisi lectus at.</p>
                   <div class="card-actions">
@@ -193,7 +198,7 @@
                     src="/images/others/latest3.png"
                     alt="Shoes" />
                 </figure>
-                <div class="card-body space-y-5">
+                <div class="card-body space-y-3 pl-3">
                   <h2 class="card-title text-xl font-semibold">Ducati XDIAVEL S-73</h2>
                   <p class="text-base-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, fermentum amet faucibus sed id nisi lectus at.</p>
                   <div class="card-actions">
@@ -203,64 +208,63 @@
               </div>
             </div>
          </section>
-
           <!-- testimonial -->
           <section class="text-center py-10">
             <h1 class="text-5xl font-bold mb-12 mt-8">Happy <span class="text-[#E76F51]">Clients says</span></h1>
 
            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mx-auto max-w-5xl">
             <!-- card 1 -->
-              <div class="border rounded-xl shadow-md h-[450px] mix-blend-pass through p-5">
-                <img src="/images/others/user-1.png" class="mx-auto w-24 mb-15 mt-5" />
+              <div class="border rounded-md shadow-md h-[450px] mix-blend-normal p-5">
+                <img src="/images/others/user-1.png" class="mx-auto w-32 mb-15 mt-5" />
                 <div class="space-y-5">
-                  <p class="text-sm leading-7 my-3 font-light opacity-50">Slate helps you see how 
+                  <p class="text-sm leading-7 my-5 font-normal opacity-90 mx-4">Slate helps you see how 
                     many more days you need 
                     to work to reach your financial 
                     goal for the month and year.</p>
-                    <div class="rating rating-xs flex justify-center">
-                      <div class="mask mask-star bg-orange-400" aria-label="1 star"></div>
-                      <div class="mask mask-star bg-orange-400" aria-label="2 star"></div>
-                      <div class="mask mask-star bg-orange-400" aria-label="3 star"></div>
-                      <div class="mask mask-star bg-orange-400" aria-label="4 star"></div>
-                      <div class="mask mask-star bg-orange-400" aria-label="5 star" aria-current="true"></div>
+                    <div class="rating rating-sm flex justify-center">
+                      <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" />
+                      <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" />
+                      <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" />
+                      <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" checked />
+                      <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" />
                     </div>     
                     <h4 class="text-sm font-semibold text-[#23A6F0]">Jhon Doe</h4>
                     <h4 class="text-sm font-semibold text-[#252B42]">Doctor</h4>
                 </div>
               </div>
               <!-- card 2 -->
-              <div class="border rounded-xl shadow-md h-[450px] mix-blend-pass through p-5">
-                <img src="/images/others/user-2.png" class="mx-auto w-24 mb-15 mt-5" />
+              <div class="border rounded-md shadow-md h-[450px] mix-blend-normal p-5">
+                <img src="/images/others/user-2.png" class="mx-auto w-32 mb-15 mt-5" />
                 <div class="space-y-5">
-                  <p class="text-sm leading-7 my-3 font-light opacity-50">Slate helps you see how 
+                  <p class="text-sm leading-7 my-5 font-normal opacity-90 mx-4">Slate helps you see how 
                     many more days you need 
                     to work to reach your financial 
                     goal for the month and year.</p>
-                    <div class="rating rating-xs flex justify-center">
-                      <div class="mask mask-star bg-orange-400" aria-label="1 star"></div>
-                      <div class="mask mask-star bg-orange-400" aria-label="2 star"></div>
-                      <div class="mask mask-star bg-orange-400" aria-label="3 star" ></div>
-                      <div class="mask mask-star bg-orange-400" aria-label="4 star" aria-current="true"></div>
-                      <div class="mask mask-star bg-orange-400" aria-label="5 star"></div>
+                    <div class="rating rating-sm flex justify-center">
+                      <input type="radio" name="rating-2" class="mask mask-star bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star bg-orange-400" checked />
                     </div>     
                     <h4 class="text-sm font-semibold text-[#23A6F0]">Regina Miles</h4>
                     <h4 class="text-sm font-semibold text-[#252B42]">Banker</h4>
                 </div>
               </div>
               <!-- card 3 -->
-              <div class="border rounded-xl shadow-md h-[450px] mix-blend-pass through p-5">
-                <img src="/images/others/user-3.png" class="mx-auto w-24 mb-15 mt-5" />
+              <div class="border rounded-md shadow-md h-[450px] mix-blend-normal p-5">
+                <img src="/images/others/user-3.png" class="mx-auto w-32 mb-15 mt-5" />
                 <div class="space-y-5">
-                  <p class="text-sm leading-7 my-3 font-light opacity-50">Slate helps you see how 
+                  <p class="text-sm leading-7 my-5 font-normal opacity-90 mx-4">Slate helps you see how 
                     many more days you need 
                     to work to reach your financial 
                     goal for the month and year.</p>
-                    <div class="rating rating-xs flex justify-center">
-                      <div class="mask mask-star bg-orange-400" aria-label="1 star"></div>
-                      <div class="mask mask-star bg-orange-400" aria-label="2 star"></div>
-                      <div class="mask mask-star bg-orange-400" aria-label="3 star" ></div>
-                      <div class="mask mask-star bg-orange-400" aria-label="4 star" aria-current="true"></div>
-                      <div class="mask mask-star bg-orange-400" aria-label="5 star" ></div>
+                    <div class="rating rating-sm flex justify-center">
+                      <input type="radio" name="rating-3" class="mask mask-star bg-orange-400" />
+                      <input type="radio" name="rating-3" class="mask mask-star bg-orange-400" />
+                      <input type="radio" name="rating-3" class="mask mask-star bg-orange-400" />
+                      <input type="radio" name="rating-3" class="mask mask-star bg-orange-400" checked />
+                      <input type="radio" name="rating-3" class="mask mask-star bg-orange-400" />
                     </div>     
                     <h4 class="text-sm font-semibold text-[#23A6F0]">Regina Miles</h4>
                     <h4 class="text-sm font-semibold text-[#252B42]">Colamist</h4>
@@ -271,18 +275,18 @@
           <!-- FAQ section -->
           <section class="my-24">
             <h1 class="text-5xl font-bold text-center mb-24 mt-8">Frequently Asked <span class="text-[#E76F51]">Questions</span></h1>
-            <div class="hero">
-              <div class="hero-content flex-col lg:flex-row">
+            <div class="hero px-2 sm:px-0">
+              <div class="hero-content flex-col lg:flex-row gap-8 w-full">
                 <img
                   src="/images/others/faq.png"
-                  class="max-w-sm rounded-lg shadow-xl"
+                  class="max-w-xs sm:max-w-md rounded-lg shadow-xl mx-auto"
                 />
-                <div class="space-y-5">
+                <div class="space-y-5 w-full max-w-lg mx-auto">
                   <div class="collapse collapse-arrow bg-base-100 border border-blue-100">
                     <input type="radio" name="my-accordion-2" checked="checked" />
                     <div class="collapse-title font-semibold">What are the most important things I should
                       know about riding a bike??</div>
-                    <div class="collapse-content text-sm">Safety First! Always obey the rules of the road. Obey all traffic signals, signs, and laws. Get in the mindset of “driving” your bike—not just “riding” your bike. This will help you be a more focused and legally compliant bike rider. </div>
+                    <div class="collapse-content text-sm">Safety First! Always obey the rules of the road. Obey all traffic signals, signs, and laws. Get in the mindset of "driving" your bike—not just "riding" your bike. This will help you be a more focused and legally compliant bike rider. </div>
                   </div>
                   <div class="collapse collapse-arrow bg-base-100 border border-blue-100">
                     <input type="radio" name="my-accordion-2" />
@@ -311,8 +315,35 @@
            </section>
       </main>
       <!-- footer section -->
-       <footer>
-
-       </footer>
+      <footer class="footer flex flex-col sm:flex-row bg-neutral text-neutral-content justify-around items-center p-6 sm:p-10 gap-6 sm:gap-0">
+        <aside class="w-full sm:w-auto flex flex-col items-center sm:items-start">
+          <nav class="space-x-0 sm:space-x-3 flex flex-col sm:flex-row items-center sm:items-start">
+            <h6 class="footer-title">Services</h6>
+            <a class="link link-hover">About</a>
+            <a class="link link-hover">Features</a>
+            <a class="link link-hover">Pricing</a>
+            <a class="link link-hover">Careers</a>
+            <a class="link link-hover">Help</a>
+            <a class="link link-hover">Privacy</a>
+          </nav>
+          
+          <nav>
+            <h6 class="footer-title link link-hover">Download Now <span class="pl-6">License</span></h6>
+          </nav>
+          <!-- copyright -->
+          <div class="w-full text-center sm:text-left text-xs text-neutral-content bg-neutral pb-4 pl-18 mt-2">© 2027 mimsha7. All rights reserved</div>
+        </aside>
+        <nav class="w-full sm:w-auto flex flex-col items-center">
+          <h6 class="footer-title">Get The App</h6>
+          <div class="grid grid-cols-1 gap-4">
+            <a>
+              <img src="/images/others/android.png" class="w-36 link" alt="">
+            </a>
+            <a>
+              <img src="/images/others/ios.png" class="w-36 link" alt="">
+            </a>
+          </div>
+        </nav>
+      </footer>
 </body>
 </html>
